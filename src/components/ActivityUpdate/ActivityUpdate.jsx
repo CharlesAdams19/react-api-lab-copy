@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router"
 import { getSingleActivity, updateActivity } from "../../services/activities"
@@ -84,6 +85,7 @@ export default function ActivityUpdate(){
               {error.duration && <p className='error-message'>{error.duration}</p>}
             </div>
 
+            {error.message && <p className="error-message">{error.message}</p>}
             {error.preload && <p className="error-message">{error.preload}</p>}
     
             {/* Submit */}
